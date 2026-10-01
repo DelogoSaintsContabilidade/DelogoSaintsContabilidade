@@ -1,823 +1,1895 @@
-<meta name="description" content="Delogo & Saints Contabilidade - Serviços contábeis, treinamento profissional e apoio administrativo em Barra de São Francisco - ES.">
-<meta name="keywords" content="contabilidade, contador, contabilidade Barra de São Francisco, Espírito Santo, Delogo Saints, serviços contábeis">
-<meta name="author" content="Delogo & Saints Contabilidade">
-
-<title>Delogo & Saints Contabilidade | Soluções Contábeis</title>
-
-<!-- Bootstrap 5 -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-
-<style>
-    :root {
-        --primary: #0b1f3a;
-        --primary-light: #123c69;
-        --secondary: #1677b8;
-        --accent: #18a974;
-        --accent-light: #e8f8f1;
-        --light: #f5f8fc;
-        --dark: #142033;
-        --text: #596579;
-        --white: #ffffff;
-        --border: #e5eaf0;
-        --shadow: 0 15px 45px rgba(11, 31, 58, 0.10);
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        font-family: "Inter", sans-serif;
-        color: var(--text);
-        background: #fff;
-        line-height: 1.7;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-family: "Montserrat", sans-serif;
-        color: var(--dark);
-        font-weight: 700;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    .section-padding {
-        padding: 100px 0;
-    }
-
-    .section-title {
-        max-width: 720px;
-        margin: 0 auto 55px;
-        text-align: center;
-    }
-
-    .section-title .badge-title {
-        display: inline-block;
-        color: var(--accent);
-        background: var(--accent-light);
-        border-radius: 50px;
-        padding: 7px 16px;
-        font-size: 13px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 15px;
-    }
-
-    .section-title h2 {
-        font-size: clamp(30px, 4vw, 44px);
-        margin-bottom: 15px;
-    }
-
-    .section-title p {
-        font-size: 16px;
-        color: var(--text);
-    }
-
-    /* NAVBAR */
-    .navbar {
-        padding: 17px 0;
-        background: rgba(255,255,255,.96);
-        box-shadow: 0 3px 20px rgba(0,0,0,.05);
-        backdrop-filter: blur(10px);
-    }
-
-    .navbar-brand {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 800;
-        font-size: 20px;
-        color: var(--primary) !important;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .brand-icon {
-        width: 42px;
-        height: 42px;
-        border-radius: 12px;
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 21px;
-    }
-
-    .navbar-nav .nav-link {
-        color: #465267;
-        font-weight: 600;
-        font-size: 14px;
-        margin: 0 7px;
-        transition: .3s;
-    }
-
-    .navbar-nav .nav-link:hover {
-        color: var(--secondary);
-    }
-
-    .btn-header {
-        background: var(--accent);
-        color: white;
-        padding: 11px 20px;
-        border-radius: 8px;
-        font-weight: 700;
-        font-size: 14px;
-        transition: .3s;
-    }
-
-    .btn-header:hover {
-        background: #12875e;
-        color: white;
-        transform: translateY(-2px);
-    }
-
-    /* HERO */
-    .hero {
-        min-height: 720px;
-        display: flex;
-        align-items: center;
-        position: relative;
-        overflow: hidden;
-        color: white;
-        background:
-            linear-gradient(115deg, rgba(7,24,46,.98), rgba(13,62,105,.91)),
-            url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1800&q=85");
-        background-size: cover;
-        background-position: center;
-    }
-
-    .hero::before {
-        content: "";
-        position: absolute;
-        width: 500px;
-        height: 500px;
-        border: 80px solid rgba(255,255,255,.035);
-        border-radius: 50%;
-        right: -180px;
-        top: -130px;
-    }
-
-    .hero::after {
-        content: "";
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        background: rgba(24,169,116,.08);
-        border-radius: 50%;
-        left: -100px;
-        bottom: -120px;
-    }
-
-    .hero-content {
-        position: relative;
-        z-index: 2;
-    }
-
-    .hero-tag {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: rgba(24,169,116,.15);
-        border: 1px solid rgba(24,169,116,.35);
-        color: #6ce2b4;
-        padding: 8px 16px;
-        border-radius: 50px;
-        font-size: 13px;
-        font-weight: 700;
-        margin-bottom: 25px;
-    }
-
-    .hero h1 {
-        color: white;
-        font-size: clamp(38px, 5.5vw, 66px);
-        line-height: 1.1;
-        margin-bottom: 25px;
-        max-width: 800px;
-    }
-
-    .hero h1 span {
-        color: #5be0ad;
-    }
-
-    .hero p {
-        color: rgba(255,255,255,.80);
-        max-width: 650px;
-        font-size: 18px;
-        margin-bottom: 35px;
-    }
-
-    .hero-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 13px;
-    }
-
-    .btn-main {
-        background: var(--accent);
-        color: white;
-        border: 0;
-        padding: 14px 24px;
-        border-radius: 8px;
-        font-weight: 700;
-        transition: .3s;
-    }
-
-    .btn-main:hover {
-        background: #12875e;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(24,169,116,.25);
-    }
-
-    .btn-outline-light-custom {
-        border: 1px solid rgba(255,255,255,.35);
-        color: white;
-        padding: 13px 24px;
-        border-radius: 8px;
-        font-weight: 700;
-        transition: .3s;
-    }
-
-    .btn-outline-light-custom:hover {
-        background: white;
-        color: var(--primary);
-    }
-
-    /* STATS */
-    .stats {
-        margin-top: -55px;
-        position: relative;
-        z-index: 5;
-    }
-
-    .stats-wrapper {
-        background: white;
-        border-radius: 16px;
-        box-shadow: var(--shadow);
-        padding: 28px 15px;
-    }
-
-    .stat-item {
-        text-align: center;
-        padding: 10px 20px;
-        border-right: 1px solid var(--border);
-    }
-
-    .stat-item:last-child {
-        border-right: 0;
-    }
-
-    .stat-number {
-        color: var(--primary);
-        font-size: 27px;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 800;
-    }
-
-    .stat-label {
-        font-size: 13px;
-        color: #758094;
-        margin-top: 2px;
-    }
-
-    /* SERVICES */
-    .services {
-        background: var(--light);
-    }
-
-    .service-card {
-        background: white;
-        border: 1px solid var(--border);
-        border-radius: 15px;
-        padding: 32px;
-        height: 100%;
-        transition: .3s;
-    }
-
-    .service-card:hover {
-        transform: translateY(-8px);
-        box-shadow: var(--shadow);
-        border-color: transparent;
-    }
-
-    .service-icon {
-        width: 58px;
-        height: 58px;
-        border-radius: 13px;
-        background: linear-gradient(135deg, #e8f3fc, #edf9f4);
-        color: var(--secondary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 27px;
-        margin-bottom: 23px;
-    }
-
-    .service-card h4 {
-        font-size: 19px;
-        margin-bottom: 12px;
-    }
-
-    .service-card p {
-        font-size: 14px;
-        margin-bottom: 0;
-    }
-
-    /* ABOUT */
-    .about-image {
-        position: relative;
-    }
-
-    .about-image img {
-        width: 100%;
-        height: 510px;
-        object-fit: cover;
-        border-radius: 18px;
-    }
-
-    .about-badge {
-        position: absolute;
-        right: -25px;
-        bottom: 30px;
-        background: white;
-        box-shadow: var(--shadow);
-        padding: 20px 25px;
-        border-radius: 13px;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .about-badge-icon {
-        width: 48px;
-        height: 48px;
-        background: var(--accent-light);
-        color: var(--accent);
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 22px;
-    }
-
-    .about-content {
-        padding-left: 35px;
-    }
-
-    .check-list {
-        list-style: none;
-        padding: 0;
-        margin-top: 25px;
-    }
-
-    .check-list li {
-        display: flex;
-        gap: 12px;
-        margin-bottom: 13px;
-        color: #455166;
-    }
-
-    .check-list i {
-        color: var(--accent);
-        font-size: 20px;
-    }
-
-    /* CTA */
-    .cta {
-        background: linear-gradient(110deg, var(--primary), var(--primary-light));
-        position: relative;
-        overflow: hidden;
-    }
-
-    .cta::before {
-        content: "";
-        position: absolute;
-        width: 450px;
-        height: 450px;
-        border: 80px solid rgba(255,255,255,.04);
-        border-radius: 50%;
-        right: -180px;
-        top: -180px;
-    }
-
-    .cta h2 {
-        color: white;
-        font-size: clamp(28px, 4vw, 42px);
-    }
-
-    .cta p {
-        color: rgba(255,255,255,.72);
-    }
-
-    /* COMPANY DATA */
-    .data-section {
-        background: white;
-    }
-
-    .info-card {
-        background: var(--light);
-        border-radius: 14px;
-        padding: 24px;
-        height: 100%;
-        border: 1px solid var(--border);
-    }
-
-    .info-card h5 {
-        font-size: 16px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid var(--border);
-        margin-bottom: 18px;
-    }
-
-    .info-row {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        padding: 8px 0;
-        font-size: 14px;
-        border-bottom: 1px dashed #dce2e9;
-    }
-
-    .info-row:last-child {
-        border-bottom: 0;
-    }
-
-    .info-label {
-        color: #778297;
-    }
-
-    .info-value {
-        text-align: right;
-        color: var(--dark);
-        font-weight: 600;
-    }
-
-    .status {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        background: #e7f8f0;
-        color: #12875e;
-        padding: 4px 10px;
-        border-radius: 50px;
-        font-size: 12px;
-    }
-
-    .status::before {
-        content: "";
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: #18a974;
-    }
-
-    /* CNAE */
-    .cnae-card {
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        padding: 25px;
-        height: 100%;
-        transition: .3s;
-    }
-
-    .cnae-card:hover {
-        box-shadow: var(--shadow);
-        transform: translateY(-4px);
-    }
-
-    .cnae-icon {
-        width: 48px;
-        height: 48px;
-        background: #eaf4fb;
-        color: var(--secondary);
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 21px;
-        margin-bottom: 17px;
-    }
-
-    .cnae-code {
-        font-size: 12px;
-        font-weight: 800;
-        color: var(--secondary);
-        letter-spacing: .5px;
-    }
-
-    .cnae-card h5 {
-        font-size: 17px;
-        margin: 5px 0 8px;
-    }
-
-    .cnae-card p {
-        font-size: 13px;
-        margin: 0;
-    }
-
-    /* TEAM */
-    .team-card {
-        background: white;
-        border: 1px solid var(--border);
-        border-radius: 15px;
-        padding: 30px;
-        text-align: center;
-        transition: .3s;
-    }
-
-    .team-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow);
-    }
-
-    .team-avatar {
-        width: 90px;
-        height: 90px;
-        margin: 0 auto 20px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 31px;
-        font-weight: 800;
-        font-family: "Montserrat", sans-serif;
-    }
-
-    .team-card h5 {
-        margin-bottom: 5px;
-    }
-
-    .team-card p {
-        margin: 0;
-        font-size: 13px;
-        color: var(--secondary);
-        font-weight: 600;
-    }
-
-    /* CONTACT */
-    .contact {
-        background: var(--light);
-    }
-
-    .contact-card {
-        background: white;
-        border-radius: 16px;
-        padding: 35px;
-        height: 100%;
-        border: 1px solid var(--border);
-    }
-
-    .contact-item {
-        display: flex;
-        gap: 16px;
-        margin-bottom: 25px;
-    }
-
-    .contact-item:last-child {
-        margin-bottom: 0;
-    }
-
-    .contact-icon {
-        flex-shrink: 0;
-        width: 48px;
-        height: 48px;
-        border-radius: 10px;
-        background: var(--accent-light);
-        color: var(--accent);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 21px;
-    }
-
-    .contact-item h6 {
-        font-size: 14px;
-        margin-bottom: 3px;
-    }
-
-    .contact-item p,
-    .contact-item a {
-        font-size: 14px;
-        color: var(--text);
-        margin: 0;
-    }
-
-    .contact-item a:hover {
-        color: var(--secondary);
-    }
-
-    .map-box {
-        height: 100%;
-        min-height: 400px;
-        border-radius: 16px;
-        overflow: hidden;
-        background:
-            linear-gradient(rgba(11,31,58,.82), rgba(11,31,58,.82)),
-            url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1200&q=80");
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 30px;
-    }
-
-    .map-content {
-        color: white;
-    }
-
-    .map-content i {
-        font-size: 48px;
-        color: #5be0ad;
-    }
-
-    .map-content h4 {
-        color: white;
-        margin-top: 15px;
-    }
-
-    .map-content p {
-        color: rgba(255,255,255,.75);
-    }
-
-    /* FOOTER */
-    footer {
-        background: #07182c;
-        color: rgba(255,255,255,.65);
-        padding: 65px 0 25px;
-    }
-
-    .footer-brand {
-        color: white;
-        font-family: "Montserrat", sans-serif;
-        font-size: 21px;
-        font-weight: 800;
-        margin-bottom: 15px;
-    }
-
-    footer p {
-        font-size: 13px;
-    }
-
-    .footer-title {
-        color: white;
-        font-size: 15px;
-        margin-bottom: 20px;
-    }
-
-    .footer-links {
-        list-style: none;
-        padding: 0;
-    }
-
-    .footer-links li {
-        margin-bottom: 9px;
-    }
-
-    .footer-links a {
-        color: rgba(255,255,255,.6);
-        font-size: 13px;
-        transition: .3s;
-    }
-
-    .footer-links a:hover {
-        color: #5be0ad;
-    }
-
-    .footer-bottom {
-        border-top: 1px solid rgba(255,255,255,.08);
-        margin-top: 40px;
-        padding-top: 20px;
-        font-size: 12px;
-    }
-
-    .social-icon {
-        width: 38px;
-        height: 38px;
-        border-radius: 8px;
-        background: rgba(255,255,255,.07);
-        color: white;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 6px;
-        transition: .3s;
-    }
-
-    .social-icon:hover {
-        background: var(--accent);
-        color: white;
-    }
-
-    /* WHATSAPP FLOAT */
-    .whatsapp {
-        position: fixed;
-        right: 22px;
-        bottom: 22px;
-        width: 58px;
-        height: 58px;
-        border-radius: 50%;
-        background: #25d366;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 29px;
-        box-shadow: 0 8px 25px rgba(37,211,102,.35);
-        z-index: 999;
-        transition: .3s;
-    }
-
-    .whatsapp:hover {
-        color: white;
-        transform: scale(1.08);
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 991px) {
-        .navbar-collapse {
-            padding-top: 15px;
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Delogo & Saints Contabilidade | Soluções Contábeis</title>
+
+    <meta name="description"
+          content="Delogo & Saints Contabilidade — serviços contábeis, fiscais e empresariais em Barra de São Francisco - ES.">
+
+    <meta name="keywords"
+          content="contabilidade, contador, escritório contábil, Barra de São Francisco, Espírito Santo, Delogo Saints">
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        :root {
+            --primary: #0b3d5c;
+            --primary-dark: #072b41;
+            --secondary: #14b8a6;
+            --secondary-dark: #0f8f81;
+            --light: #f5f9fc;
+            --dark: #12202b;
+            --gray: #64748b;
+            --white: #ffffff;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background: #ffffff;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            transition: all .3s ease;
+            padding: 18px 0;
+            background: rgba(255,255,255,.97);
+            box-shadow: 0 2px 20px rgba(0,0,0,.04);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 1.15rem;
+        }
+
+        .navbar-brand span {
+            color: var(--secondary);
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: #334155 !important;
+            margin: 0 7px;
+            transition: .3s;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary) !important;
+        }
+
+        .btn-nav {
+            background: var(--primary);
+            color: white !important;
+            padding: 10px 20px !important;
+            border-radius: 8px;
+        }
+
+        .btn-nav:hover {
+            background: var(--primary-dark);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
-            min-height: 650px;
+            min-height: 760px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    115deg,
+                    rgba(7,43,65,.98),
+                    rgba(11,61,92,.93),
+                    rgba(20,184,166,.65)
+                ),
+                url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2000&q=80")
+                center/cover;
         }
 
-        .about-content {
-            padding-left: 0;
-            margin-top: 50px;
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.05);
+            right: -150px;
+            top: -100px;
         }
 
-        .about-badge {
-            right: 15px;
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
 
-        .stat-item {
-            border-right: 0;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 10px;
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,.12);
+            border: 1px solid rgba(255,255,255,.2);
+            padding: 9px 15px;
+            border-radius: 50px;
+            color: #fff;
+            font-size: .9rem;
+            margin-bottom: 25px;
+            backdrop-filter: blur(5px);
         }
 
-        .stat-item:last-child {
-            border-bottom: 0;
-        }
-    }
-
-    @media (max-width: 767px) {
-        .section-padding {
-            padding: 70px 0;
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.8rem);
+            line-height: 1.05;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 25px;
         }
 
-        .hero {
-            min-height: 650px;
+        .hero h1 span {
+            color: #5eead4;
         }
 
         .hero p {
-            font-size: 16px;
+            color: rgba(255,255,255,.86);
+            font-size: 1.15rem;
+            line-height: 1.8;
+            max-width: 680px;
+            margin-bottom: 35px;
         }
 
-        .hero-buttons {
-            flex-direction: column;
+        .btn-main {
+            background: var(--secondary);
+            border: none;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-main:hover {
+            background: var(--secondary-dark);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light-custom {
+            border: 1px solid rgba(255,255,255,.5);
+            color: white;
+            padding: 13px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-outline-light-custom:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            margin-top: -55px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 28px 20px;
+            box-shadow: 0 15px 40px rgba(7,43,65,.12);
+            height: 100%;
+            text-align: center;
+            transition: .3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .stat-icon {
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            border-radius: 12px;
+            color: var(--secondary);
+            background: rgba(20,184,166,.1);
+            font-size: 1.5rem;
+        }
+
+        .stat-card h4 {
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            color: var(--gray);
+            margin: 0;
+            font-size: .9rem;
+        }
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            color: var(--secondary);
+            font-size: .85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-weight: 800;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 20px;
+        }
+
+        .section-text {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-section {
+            background: var(--light);
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 15px;
+            height: 100%;
+            border: 1px solid #e8eef3;
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(20,184,166,.35);
+            box-shadow: 0 15px 40px rgba(7,43,65,.08);
+        }
+
+        .service-icon {
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(20,184,166,.1);
+            color: var(--secondary);
+            border-radius: 14px;
+            font-size: 1.8rem;
+            margin-bottom: 22px;
+        }
+
+        .service-card h4 {
+            color: var(--primary);
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-image {
+            min-height: 480px;
+            border-radius: 20px;
+            background:
+                linear-gradient(
+                    rgba(7,43,65,.15),
+                    rgba(7,43,65,.3)
+                ),
+                url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80")
+                center/cover;
+        }
+
+        .check-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+
+        .check-list li {
+            display: flex;
             align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 18px;
+            color: #475569;
         }
 
-        .about-image img {
-            height: 390px;
+        .check-list i {
+            color: var(--secondary);
+            font-size: 1.15rem;
         }
 
-        .about-badge {
-            bottom: 15px;
-            right: 10px;
-            padding: 15px;
+        /* =========================
+           DIFFERENTIALS
+        ========================= */
+
+        .difference {
+            border-left: 3px solid var(--secondary);
+            padding-left: 20px;
+            margin-bottom: 30px;
         }
 
-        .info-row {
-            flex-direction: column;
-            gap: 2px;
+        .difference h5 {
+            color: var(--primary);
+            font-weight: 700;
         }
 
-        .info-value {
-            text-align: left;
+        .difference p {
+            color: var(--gray);
+            margin: 0;
+            line-height: 1.7;
         }
-    }
-</style>
+
+        /* =========================
+           COMPANY DATA
+        ========================= */
+
+        .company-section {
+            background: var(--primary);
+            color: white;
+        }
+
+        .company-section .section-title {
+            color: white;
+        }
+
+        .company-section .section-text {
+            color: rgba(255,255,255,.7);
+        }
+
+        .data-card {
+            background: rgba(255,255,255,.07);
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 12px;
+            padding: 20px;
+            height: 100%;
+        }
+
+        .data-card i {
+            color: #5eead4;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .data-card small {
+            display: block;
+            color: rgba(255,255,255,.55);
+            margin-bottom: 5px;
+        }
+
+        .data-card strong {
+            color: white;
+        }
+
+        /* =========================
+           PARTNERS
+        ========================= */
+
+        .partner-card {
+            background: white;
+            border: 1px solid #e8eef3;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            height: 100%;
+            transition: .3s;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.07);
+        }
+
+        .partner-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(20,184,166,.1);
+            color: var(--secondary);
+            font-size: 1.8rem;
+        }
+
+        .partner-card h5 {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .partner-card p {
+            color: var(--gray);
+            margin: 0;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-section {
+            background: var(--light);
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 18px;
+            padding: 35px;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,.04);
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: rgba(20,184,166,.1);
+            color: var(--secondary);
+            font-size: 1.2rem;
+        }
+
+        .contact-item h6 {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .contact-item p,
+        .contact-item a {
+            color: var(--gray);
+            text-decoration: none;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .contact-item a:hover {
+            color: var(--secondary);
+        }
+
+        /* =========================
+           MAP
+        ========================= */
+
+        .map-wrapper {
+            height: 100%;
+            min-height: 450px;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 450px;
+            border: 0;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            background:
+                linear-gradient(
+                    120deg,
+                    var(--secondary),
+                    #0d9488
+                );
+            color: white;
+            padding: 75px 0;
+        }
+
+        .cta h2 {
+            font-weight: 800;
+            font-size: 2.5rem;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,.85);
+            font-size: 1.05rem;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .btn-white:hover {
+            background: #f1f5f9;
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #061f2f;
+            color: white;
+            padding: 65px 0 25px;
+        }
+
+        footer h5 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        footer p,
+        footer li {
+            color: rgba(255,255,255,.6);
+            line-height: 1.8;
+        }
+
+        footer ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 8px;
+        }
+
+        footer a {
+            color: rgba(255,255,255,.65);
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        footer a:hover {
+            color: #5eead4;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.1);
+            margin-top: 40px;
+            padding-top: 20px;
+            color: rgba(255,255,255,.45);
+            font-size: .85rem;
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25d366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 10px 25px rgba(37,211,102,.35);
+            z-index: 999;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .whatsapp:hover {
+            color: white;
+            transform: scale(1.08);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .hero {
+                min-height: 680px;
+            }
+
+            .navbar-collapse {
+                background: white;
+                padding: 15px;
+                border-radius: 10px;
+                margin-top: 10px;
+            }
+
+            .about-image {
+                min-height: 350px;
+                margin-bottom: 35px;
+            }
+
+        }
+
+        @media (max-width: 767px) {
+
+            section {
+                padding: 70px 0;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero h1 {
+                font-size: 2.7rem;
+            }
+
+            .stats {
+                margin-top: -30px;
+            }
+
+            .stat-card {
+                margin-bottom: 15px;
+            }
+
+            .cta h2 {
+                font-size: 2rem;
+            }
+
+            .whatsapp {
+                width: 54px;
+                height: 54px;
+                right: 18px;
+                bottom: 18px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#inicio">
+            Delogo & Saints
+            <span>Contabilidade</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#empresa">Empresa</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#socios">Equipe</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                    <a class="nav-link btn-nav" href="tel:+552740422201">
+                        <i class="bi bi-telephone me-1"></i>
+                        Fale conosco
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero" id="inicio">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                <i class="bi bi-patch-check-fill"></i>
+                Escritório de Contabilidade
+            </div>
+
+            <h1>
+                Contabilidade que
+                <span>cuida do seu negócio.</span>
+            </h1>
+
+            <p>
+                Soluções contábeis para empresas que buscam organização,
+                segurança e tranquilidade para crescer. Conte com a
+                Delogo & Saints Contabilidade.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3">
+
+                <a href="#contato" class="btn btn-main">
+                    <i class="bi bi-chat-dots me-2"></i>
+                    Entre em contato
+                </a>
+
+                <a href="#servicos" class="btn btn-outline-light-custom">
+                    Conheça nossos serviços
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats pt-0">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-calendar-check"></i>
+                    </div>
+
+                    <h4>2021</h4>
+
+                    <p>Ano de fundação</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+
+                    <h4>ME</h4>
+
+                    <p>Porte da empresa</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <h4>Ativa</h4>
+
+                    <p>Situação cadastral</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+
+                    <h4>ES</h4>
+
+                    <p>Barra de São Francisco</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVIÇOS
+========================= -->
+
+<section class="services-section" id="servicos">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                Nossos serviços
+            </div>
+
+            <h2 class="section-title">
+                Soluções para sua empresa
+            </h2>
+
+            <p class="section-text mx-auto" style="max-width: 700px;">
+                A contabilidade vai muito além dos números.
+                Nosso objetivo é oferecer organização e suporte
+                para que sua empresa possa tomar decisões com mais
+                segurança.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-calculator"></i>
+                    </div>
+
+                    <h4>Contabilidade</h4>
+
+                    <p>
+                        Escrituração e acompanhamento contábil
+                        para manter as informações da sua empresa
+                        organizadas e atualizadas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <h4>Obrigações fiscais</h4>
+
+                    <p>
+                        Apoio na organização das informações
+                        necessárias para o cumprimento das
+                        obrigações fiscais da empresa.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+
+                    <h4>Assessoria empresarial</h4>
+
+                    <p>
+                        Informações contábeis para auxiliar
+                        empresários na administração e
+                        acompanhamento do negócio.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-person-vcard"></i>
+                    </div>
+
+                    <h4>Departamento pessoal</h4>
+
+                    <p>
+                        Suporte aos processos relacionados aos
+                        colaboradores e rotinas de departamento
+                        pessoal.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h4>Planejamento</h4>
+
+                    <p>
+                        Organização de informações para auxiliar
+                        o empresário no planejamento financeiro
+                        e empresarial.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-headset"></i>
+                    </div>
+
+                    <h4>Consultoria contábil</h4>
+
+                    <p>
+                        Atendimento próximo para esclarecer
+                        dúvidas e auxiliar nas decisões relacionadas
+                        à rotina contábil da empresa.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SOBRE
+========================= -->
+
+<section id="empresa">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="about-image"></div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="section-label">
+                    Sobre a empresa
+                </div>
+
+                <h2 class="section-title">
+                    Mais organização para sua empresa.
+                </h2>
+
+                <p class="section-text">
+                    A <strong>Delogo & Saints Contabilidade LTDA</strong>
+                    atua no segmento de atividades de contabilidade,
+                    oferecendo suporte contábil para empresas e
+                    empreendedores.
+                </p>
+
+                <p class="section-text">
+                    Fundada em 27 de novembro de 2021, a empresa está
+                    localizada em Barra de São Francisco, Espírito Santo,
+                    e possui situação cadastral ativa.
+                </p>
+
+                <ul class="check-list">
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Atendimento próximo e profissional.</span>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Organização das informações contábeis.</span>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Suporte para empresas e empreendedores.</span>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Empresa enquadrada no Simples Nacional.</span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DIFERENCIAIS
+========================= -->
+
+<section class="services-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5">
+
+                <div class="section-label">
+                    Nosso propósito
+                </div>
+
+                <h2 class="section-title">
+                    Uma contabilidade mais próxima.
+                </h2>
+
+                <p class="section-text">
+                    O relacionamento entre contador e empresário
+                    é fundamental para uma boa gestão. Por isso,
+                    buscamos oferecer informações claras e
+                    atendimento próximo.
+                </p>
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <div class="difference">
+
+                    <h5>
+                        <i class="bi bi-check2-circle me-2 text-success"></i>
+                        Organização
+                    </h5>
+
+                    <p>
+                        Informações contábeis organizadas para
+                        facilitar o acompanhamento da empresa.
+                    </p>
+
+                </div>
+
+
+                <div class="difference">
+
+                    <h5>
+                        <i class="bi bi-check2-circle me-2 text-success"></i>
+                        Transparência
+                    </h5>
+
+                    <p>
+                        Comunicação clara para que o empresário
+                        compreenda melhor suas informações.
+                    </p>
+
+                </div>
+
+
+                <div class="difference">
+
+                    <h5>
+                        <i class="bi bi-check2-circle me-2 text-success"></i>
+                        Proximidade
+                    </h5>
+
+                    <p>
+                        Atendimento direcionado às necessidades
+                        de cada empresa.
+                    </p>
+
+                </div>
+
+
+                <div class="difference">
+
+                    <h5>
+                        <i class="bi bi-check2-circle me-2 text-success"></i>
+                        Responsabilidade
+                    </h5>
+
+                    <p>
+                        Compromisso com a organização e o
+                        acompanhamento das rotinas contábeis.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DADOS DA EMPRESA
+========================= -->
+
+<section class="company-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                Informações cadastrais
+            </div>
+
+            <h2 class="section-title">
+                Dados da empresa
+            </h2>
+
+            <p class="section-text mx-auto" style="max-width: 700px;">
+                Informações institucionais e cadastrais da
+                Delogo & Saints Contabilidade LTDA.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="data-card">
+
+                    <i class="bi bi-building"></i>
+
+                    <small>Razão Social</small>
+
+                    <strong>
+                        Delogo & Saints Contabilidade LTDA
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="data-card">
+
+                    <i class="bi bi-card-text"></i>
+
+                    <small>CNPJ</small>
+
+                    <strong>
+                        44.400.500/0001-96
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="data-card">
+
+                    <i class="bi bi-calendar-event"></i>
+
+                    <small>Data de abertura</small>
+
+                    <strong>
+                        27/11/2021
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="data-card">
+
+                    <i class="bi bi-check-circle"></i>
+
+                    <small>Situação</small>
+
+                    <strong>
+                        Ativa
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="data-card">
+
+                    <i class="bi bi-bank"></i>
+
+                    <small>Natureza jurídica</small>
+
+                    <strong>
+                        Sociedade Empresária Limitada
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="data-card">
+
+                    <i class="bi bi-cash-stack"></i>
+
+                    <small>Capital social</small>
+
+                    <strong>
+                        R$ 10.000,00
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="data-card">
+
+                    <i class="bi bi-file-earmark-check"></i>
+
+                    <small>Regime</small>
+
+                    <strong>
+                        Simples Nacional
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="data-card">
+
+                    <i class="bi bi-award"></i>
+
+                    <small>CRC</small>
+
+                    <strong>
+                        ES-005453/O
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="data-card">
+
+                    <i class="bi bi-diagram-3"></i>
+
+                    <small>Tipo</small>
+
+                    <strong>
+                        Matriz
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="data-card">
+
+                    <i class="bi bi-briefcase"></i>
+
+                    <small>Porte</small>
+
+                    <strong>
+                        Micro Empresa
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-12 col-lg-4">
+
+                <div class="data-card">
+
+                    <i class="bi bi-receipt"></i>
+
+                    <small>Atividade principal — CNAE</small>
+
+                    <strong>
+                        69.20-6-01 — Atividades de contabilidade
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SÓCIOS
+========================= -->
+
+<section id="socios">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                Administração
+            </div>
+
+            <h2 class="section-title">
+                Sócios-administradores
+            </h2>
+
+            <p class="section-text mx-auto" style="max-width: 700px;">
+                Conheça os responsáveis pela administração
+                da Delogo & Saints Contabilidade.
+            </p>
+
+        </div>
+
+
+        <div class="row justify-content-center g-4">
+
+            <div class="col-md-5">
+
+                <div class="partner-card">
+
+                    <div class="partner-icon">
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <h5>
+                        Bruno Claudio dos Santos
+                    </h5>
+
+                    <p>
+                        Sócio-Administrador
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-5">
+
+                <div class="partner-card">
+
+                    <div class="partner-icon">
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <h5>
+                        Juliano Carvalho Delogo
+                    </h5>
+
+                    <p>
+                        Sócio-Administrador
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LOCALIZAÇÃO / CONTATO
+========================= -->
+
+<section class="contact-section" id="contato">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                Fale conosco
+            </div>
+
+            <h2 class="section-title">
+                Estamos à sua disposição
+            </h2>
+
+            <p class="section-text mx-auto" style="max-width: 700px;">
+                Entre em contato para saber mais sobre nossos
+                serviços contábeis.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+
+                <div class="contact-card">
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+
+                        <div>
+
+                            <h6>E-mail</h6>
+
+                            <a href="mailto:dervishivullnetpnb@gmail.com">
+                                dervishivullnetpnb@gmail.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+
+                        <div>
+
+                            <h6>Telefone</h6>
+
+                            <a href="tel:+552740422201">
+                                (27) 4042-2201
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+
+                        <div>
+
+                            <h6>Endereço</h6>
+
+                            <p>
+                                Avenida Jones dos Santos Neves, 176<br>
+                                Apt 102 — Centro<br>
+                                Barra de São Francisco — ES<br>
+                                CEP 29800-000
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-file-earmark-text"></i>
+                        </div>
+
+                        <div>
+
+                            <h6>Atividade principal</h6>
+
+                            <p>
+                                CNAE 69.20-6-01<br>
+                                Atividades de contabilidade
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Avenida+Jones+dos+Santos+Neves+176+Barra+de+S%C3%A3o+Francisco+ES"
+                        target="_blank"
+                        class="btn btn-main w-100"
+                    >
+                        <i class="bi bi-map me-2"></i>
+                        Ver no Google Maps
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-7">
+
+                <div class="map-wrapper">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=Avenida%20Jones%20dos%20Santos%20Neves%20176,%20Barra%20de%20S%C3%A3o%20Francisco,%20ES&output=embed"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="row align-items-center g-4">
+
+            <div class="col-lg-8">
+
+                <h2>
+                    Vamos cuidar da sua contabilidade?
+                </h2>
+
+                <p class="mb-0">
+                    Entre em contato com a Delogo & Saints
+                    Contabilidade e conheça nossas soluções.
+                </p>
+
+            </div>
+
+            <div class="col-lg-4 text-lg-end">
+
+                <a
+                    href="mailto:dervishivullnetpnb@gmail.com"
+                    class="btn btn-white"
+                >
+                    <i class="bi bi-envelope me-2"></i>
+                    Solicitar atendimento
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-5">
+
+                <h5>
+                    Delogo & Saints Contabilidade
+                </h5>
+
+                <p>
+                    Soluções contábeis para empresas que buscam
+                    organização, segurança e tranquilidade para
+                    cuidar dos seus negócios.
+                </p>
+
+                <p class="mb-0">
+                    <i class="bi bi-geo-alt me-2"></i>
+                    Barra de São Francisco — Espírito Santo
+                </p>
+
+            </div>
+
+
+            <div class="col-sm-6 col-lg-3">
+
+                <h5>
+                    Navegação
+                </h5>
+
+                <ul>
+
+                    <li>
+                        <a href="#inicio">Início</a>
+                    </li>
+
+                    <li>
+                        <a href="#servicos">Serviços</a>
+                    </li>
+
+                    <li>
+                        <a href="#empresa">Empresa</a>
+                    </li>
+
+                    <li>
+                        <a href="#socios">Equipe</a>
+                    </li>
+
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-sm-6 col-lg-4">
+
+                <h5>
+                    Informações
+                </h5>
+
+                <ul>
+
+                    <li>
+                        CNPJ: 44.400.500/0001-96
+                    </li>
+
+                    <li>
+                        CRC: ES-005453/O
+                    </li>
+
+                    <li>
+                        CNAE: 69.20-6-01
+                    </li>
+
+                    <li>
+                        Situação: Ativa
+                    </li>
+
+                    <li>
+                        Simples Nacional
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom text-center">
+
+            © 2026 Delogo & Saints Contabilidade LTDA.
+            Todos os direitos reservados.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+
+<!--
+    SUBSTITUA "55XXXXXXXXXXX" pelo número de WhatsApp
+    da empresa, incluindo código do país e DDD.
+
+    Exemplo:
+    552740422201
+-->
+
+<a
+    href="https://wa.me/55XXXXXXXXXXX"
+    target="_blank"
+    class="whatsapp"
+    aria-label="Falar pelo WhatsApp"
+    title="Falar pelo WhatsApp"
+>
+    <i class="bi bi-whatsapp"></i>
+</a>
+
+
+<!-- Bootstrap JS -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Fecha o menu mobile ao clicar em um link -->
+<script>
+
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+
+        link.addEventListener('click', function() {
+
+            const menu = document.querySelector('.navbar-collapse');
+
+            if (menu.classList.contains('show')) {
+
+                bootstrap.Collapse
+                    .getOrCreateInstance(menu)
+                    .hide();
+
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
